@@ -8,6 +8,11 @@ Entrenador::Entrenador(std::string nombre1,  Pokemon *p)
 	pikachucha = p;
 }
 
+Pokemon * Entrenador::getPoke()
+{
+	return pikachucha;
+}
+
 
 Entrenador::~Entrenador()
 {

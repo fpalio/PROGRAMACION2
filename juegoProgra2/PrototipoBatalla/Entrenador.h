@@ -8,6 +8,7 @@ private:
 	std::string nombre;
 public:
 	Entrenador(std::string nombre, Pokemon *p);
+	Pokemon* getPoke();
 	~Entrenador();
 };
 

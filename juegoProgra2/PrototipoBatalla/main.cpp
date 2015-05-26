@@ -9,5 +9,7 @@ int main() {
 	Batalla *b = new Batalla(ashketchupdelpueblopaleta, tetudo);
 	b->Pelear();
 
+	flushall();
+	getchar();
 	return 0;
 }
