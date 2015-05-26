@@ -7,26 +7,27 @@ CControlador::CControlador(int x, int y, CMarco* marco)
 	this->x = x;
 	this->y = y;
 	this->marco = marco;
-	
 }
-
 
 CControlador::~CControlador()
 {
 }
+
 void CControlador::DibujarPersonaje(Graphics^ g, Bitmap^ bmp)
 {
 	marco->dibujar(g, bmp);
 }
+
 void CControlador::MoverMarco(Keys key, int limX, int limY)
 {
 	marco->mover(limX, limY, key);
 }
+
 void CControlador::dibujarFondo(Graphics^ g, Bitmap^ bmp, Bitmap^bmpM, Bitmap^ bmpD,
 	int wfondo, int hfondo)
 {
 	Bitmap^ bmFondo = gcnew Bitmap(wfondo, hfondo);
-	Graphics^ gFondo = Graphics::FromImage(bmFondo);
+	Graphics^ gFondo = Graphics::FromImage(bmFondo); // de donde saca la imagen del fondo?
 
 	// el Graphics g representa la pantalla
 	int xPantalla = marco->GetX() -
@@ -57,7 +58,8 @@ void CControlador::dibujarFondo(Graphics^ g, Bitmap^ bmp, Bitmap^bmpM, Bitmap^ b
 	// Dibujo el Personaje
 	marco->dibujar(gFondo, bmpM);
 
-	//dibujar dialoge box
+	//dibujar dialog box 
+	//porque dibuja el dialog siempre??
 	marco->dibujarDialogo(gFondo, bmpD,x,y,wfondo,hfondo);
 
 	// Rectangulos de Origen y Destino

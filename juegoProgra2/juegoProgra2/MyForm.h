@@ -119,7 +119,7 @@ namespace juegoProgra2 {
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->MaximizeBox = false;
 			this->Name = L"MyForm";
-			this->Text = L"MyForm";
+			this->Text = L"Pokemon UPC";
 			this->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &MyForm::MyForm_KeyDown);
 			this->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &MyForm::MyForm_KeyUp);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
@@ -129,8 +129,10 @@ namespace juegoProgra2 {
 
 		}
 #pragma endregion
+
 	private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e) {
 		Graphics^ g = this->CreateGraphics();
+		// Que son estos 3 bmps???
 		Bitmap^ bm = gcnew Bitmap(pictureBox2->Image);
 		Bitmap^ bmpM = gcnew Bitmap(pictureBox1->Image);
 		Bitmap^ bmpD = gcnew Bitmap(pictureBox3->Image);

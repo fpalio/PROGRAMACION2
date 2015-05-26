@@ -4,7 +4,7 @@ using namespace System::Windows::Forms;
 
 enum ESTADO
 {
-	ARRIBA, ABAJO, IZQUIERDA,DERECHA
+	ARRIBA, ABAJO, IZQUIERDA, DERECHA
 };
 
 class CMarco
@@ -33,8 +33,11 @@ public:
 	int GetH();
 	int GetW();
 	void quieto(Keys key);
+	// TODO:
+	// mover dialogo a UI
 	void dibujarDialogo(Graphics^ g, Bitmap^bmpD,
 	int xpantalla, int ypantalla,int wpantalla, int hpantalla);
+
 	void hablar(Keys key);
 };
 

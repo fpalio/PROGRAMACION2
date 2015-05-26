@@ -12,16 +12,18 @@ CMarco::CMarco(int x, int y, int w, int h, int dx, int dy)
 	this->dy = dy;
 	estado = ARRIBA;
 	frame = 0;
+	//TODO:
+	//quitar dialogo
 	dialogoV = false;
 	
 
 
 }
 
-
 CMarco::~CMarco()
 {
 }
+
 void CMarco::dibujar(Graphics^ g, Bitmap^ bmp)
 {
 	int wOrigen = bmp->Size.Width / 3;
@@ -33,6 +35,7 @@ void CMarco::dibujar(Graphics^ g, Bitmap^ bmp)
 	Rectangle rDestino = Rectangle(x, y, h, w);
 	g->DrawImage(bmp, rDestino, rOrigen, GraphicsUnit::Pixel);
 }
+
 void CMarco::mover(int limX, int limY, Keys key)
 {
 	switch (key)
@@ -101,24 +104,14 @@ void CMarco::mover(int limX, int limY, Keys key)
 	}
 
 }
-int CMarco::GetX()
-{
-	return x;
-}
-int CMarco::GetY()
-{
-	return y;
-}
-int CMarco::GetH()
-{
-	return h;
-}
-int CMarco::GetW()
-{
-	return w;
-}
+int CMarco::GetX(){	return x; }
+int CMarco::GetY(){	return y; }
+int CMarco::GetH(){	return h; }
+int CMarco::GetW(){	return w; }
+
 void CMarco::quieto(Keys key)
 {
+	// creo que mejor validar el key en el form y solo parar el movimiento
 	switch(key)
 	{
 	case Keys::Up:
@@ -130,6 +123,7 @@ void CMarco::quieto(Keys key)
 	}
 	
 }
+
 void CMarco::dibujarDialogo(Graphics^ g, Bitmap^bmpD, int xpantalla, int ypantalla, int wpantalla, int hpantalla)
 {
 	int hDialogo = hpantalla/4;
@@ -140,11 +134,11 @@ void CMarco::dibujarDialogo(Graphics^ g, Bitmap^bmpD, int xpantalla, int ypantal
 	Rectangle rOrigen = Rectangle(0, 0, wOrigen, hOrigen);
 	Rectangle dOrigen = Rectangle(xpantalla+10, ypantalla+220 ,
 		wDialogo, hDialogo);
-	if (dialogoV==true)
-	g->DrawImage(bmpD, dOrigen, rOrigen, GraphicsUnit::Pixel);
-	
-
+	//dialogoV == true es lo mismo que solo dialogoV
+	if (dialogoV)
+		g->DrawImage(bmpD, dOrigen, rOrigen, GraphicsUnit::Pixel);
 }
+
 void CMarco::hablar(Keys key)
 {
 	if (key == Keys::Space)
