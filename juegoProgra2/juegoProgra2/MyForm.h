@@ -154,6 +154,7 @@ namespace juegoProgra2 {
 
 	}
 	private: System::Void MyForm_KeyDown(System::Object^  sender, System::Windows::Forms::KeyEventArgs^  e) {
+		//podemos juntar estas dos acciones en una sola funcion porque usan keys diferentes
 		controlador->MoverMarco(e->KeyCode,
 			this->DisplayRectangle.Width * 2,
 			this->DisplayRectangle.Height * 2);

@@ -13,8 +13,7 @@ public:
 	~CControlador();
 	void DibujarPersonaje(Graphics^ g, Bitmap^ bmp);
 	void MoverMarco(Keys key, int limX, int limY);
-	void dibujarFondo(Graphics^ g, Bitmap^ bmp, Bitmap^bmpM, Bitmap^ bmpD,
-		int wfondo, int hfondo);
+	void dibujarFondo(Graphics^ g, Bitmap^ bmp, Bitmap^bmpM, Bitmap^ bmpD, int wfondo, int hfondo);
 	void QuietoMarco(Keys key); 
 	void dibujarDialogo(Graphics^ g, Bitmap^bmpD, int xpantalla, int ypantalla, int wpantalla, int hpantalla);
 	void marcoHablar(Keys key);
