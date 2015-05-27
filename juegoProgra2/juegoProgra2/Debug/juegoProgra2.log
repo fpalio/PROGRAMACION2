@@ -1,56 +1,29 @@
-<<<<<<< HEAD
-﻿Build started 5/27/2015 1:57:00 PM.
+﻿Build started 5/27/2015 2:35:55 PM.
      1>Project "C:\Users\Francisco\Desktop\PROGRAMACION2\juegoProgra2\juegoProgra2\juegoProgra2.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\juegoProgra2.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib Marco.cpp
-         Marco.cpp
-     1>Marco.cpp(131): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>Marco.cpp(132): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\juegoProgra2.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib Controlador.cpp
+         Controlador.cpp
+     1>Controlador.cpp(35): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>Controlador.cpp(43): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Controlador.cpp(46): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>Controlador.cpp(53): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Controlador.cpp(69): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>Controlador.cpp(72): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Francisco\Desktop\PROGRAMACION2\juegoProgra2\Debug\juegoProgra2.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\juegoProgra2.MyForm.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Francisco\Desktop\PROGRAMACION2\juegoProgra2\Debug\juegoProgra2.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\app.res
-=======
-﻿Build started 5/27/2015 12:38:37 PM.
-     1>Project "C:\Users\Stephanos\Documents\GitHub\PROGRAMACION2\juegoProgra2\juegoProgra2\juegoProgra2.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\juegoProgra2.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib Controlador.cpp
-         Controlador.cpp
-     1>c:\users\stephanos\documents\github\programacion2\juegoprogra2\juegoprogra2\Marco.h(30): warning C4458: declaration of 'limX' hides class member
-         c:\users\stephanos\documents\github\programacion2\juegoprogra2\juegoprogra2\Marco.h(19): note: see declaration of 'CMarco::limX'
-     1>c:\users\stephanos\documents\github\programacion2\juegoprogra2\juegoprogra2\Marco.h(30): warning C4458: declaration of 'limY' hides class member
-         c:\users\stephanos\documents\github\programacion2\juegoprogra2\juegoprogra2\Marco.h(20): note: see declaration of 'CMarco::limY'
-     1>Controlador.cpp(35): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-     1>Controlador.cpp(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-     1>Controlador.cpp(46): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-     1>Controlador.cpp(53): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-     1>Controlador.cpp(69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-     1>Controlador.cpp(72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-     1>Controlador.cpp(83): warning C4458: declaration of 'x' hides class member
-         c:\users\stephanos\documents\github\programacion2\juegoprogra2\juegoprogra2\Controlador.h(12): note: see declaration of 'CControlador::x'
-     1>Controlador.cpp(83): warning C4458: declaration of 'y' hides class member
-         c:\users\stephanos\documents\github\programacion2\juegoprogra2\juegoprogra2\Controlador.h(13): note: see declaration of 'CControlador::y'
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Stephanos\Documents\GitHub\PROGRAMACION2\juegoProgra2\Debug\juegoProgra2.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\juegoProgra2.MyForm.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Stephanos\Documents\GitHub\PROGRAMACION2\juegoProgra2\Debug\juegoProgra2.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\app.res
->>>>>>> origin/master
          Debug\AssemblyInfo.obj
          Debug\Controlador.obj
+         Debug\Entrenador.obj
+         Debug\Estado.obj
          Debug\juegoProgra2.obj
          Debug\Marco.obj
          Debug\MyForm.obj
          Debug\Pokemon.obj
          Debug\stdafx.obj
          "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
-<<<<<<< HEAD
          juegoProgra2.vcxproj -> C:\Users\Francisco\Desktop\PROGRAMACION2\juegoProgra2\Debug\juegoProgra2.exe
      1>Done Building Project "C:\Users\Francisco\Desktop\PROGRAMACION2\juegoProgra2\juegoProgra2\juegoProgra2.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.13
-=======
-         juegoProgra2.vcxproj -> C:\Users\Stephanos\Documents\GitHub\PROGRAMACION2\juegoProgra2\Debug\juegoProgra2.exe
-     1>Done Building Project "C:\Users\Stephanos\Documents\GitHub\PROGRAMACION2\juegoProgra2\juegoProgra2\juegoProgra2.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:01.82
->>>>>>> origin/master
+Time Elapsed 00:00:01.66

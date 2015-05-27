@@ -21,7 +21,6 @@ Pokemon::Pokemon(int att1, int def1, tipo t1)
 // de ahi c puede ver si es super effective 
 int Pokemon::AttackPow()
 {
-	
 	return att;
 }
 
