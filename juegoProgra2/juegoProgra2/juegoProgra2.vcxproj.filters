@@ -36,6 +36,12 @@
     <ClInclude Include="Pokemon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Estado.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entrenador.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -62,6 +68,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Pokemon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Estado.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entrenador.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

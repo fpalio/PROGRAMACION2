@@ -13,6 +13,8 @@ Pokemon::Pokemon(int att1, int def1, tipo t1)
 	lvl = 10;
 	def = def1;
 	t = t1;
+	isAlive = true;
+	hp = 30;
 }
 //el attaque va a estar dentro de ontra clase , ya que el metodo necesita recivir 
 // dos pokemones para comparar que tipos son y el attaque realizado
@@ -23,16 +25,12 @@ int Pokemon::AttackPow()
 	return att;
 }
 
-int Pokemon::RecvDmg(int x)
+void Pokemon::RecvDmg(int x)
 {
-	//sigue vivo o no = 1 || 0        podemos cambiarlo por bool
-	//sigue vivo = si
 	int dmg = x - def;
 	hp -= dmg;
-	if (hp < 0) {
+	if (hp <= 0) {
 		hp = 0;
-		//sigue vivo = no
+		isAlive = false;
 	}
-	//return siguevivo
-	return 1;
 }
