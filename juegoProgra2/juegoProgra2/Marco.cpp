@@ -124,23 +124,34 @@ void CMarco::quieto(Keys key)
 	
 }
 
-void CMarco::dibujarDialogo(Graphics^ g, Bitmap^bmpD, int xpantalla, int ypantalla, int wpantalla, int hpantalla)
+void CMarco::dibujarDialogo(Graphics^ g, Bitmap^bmpD,Label^dialogo, int xpantalla, int ypantalla, int wpantalla, int hpantalla)
 {
 	int hDialogo = hpantalla/4;
 	int wDialogo =wpantalla/2 + 200 ;
 	int wOrigen = g->VisibleClipBounds.Width;
 	int hOrigen = g->VisibleClipBounds.Height/2;
-
+	dialogo->Text = "hola , esto es una prueba para el dialogo!!!";
 	Rectangle rOrigen = Rectangle(0, 0, wOrigen, hOrigen);
 	Rectangle dOrigen = Rectangle(xpantalla+10, ypantalla+220 ,
 		wDialogo, hDialogo);
-	//dialogoV == true es lo mismo que solo dialogoV
 	if (dialogoV)
+	{
 		g->DrawImage(bmpD, dOrigen, rOrigen, GraphicsUnit::Pixel);
+		
+	}
+	
+	
+	
+	
 }
 
-void CMarco::hablar(Keys key)
+void CMarco::hablar(Keys key,Label^dialogo)
 {
 	if (key == Keys::Space)
+	{
 		dialogoV = !dialogoV;
+		dialogo->Visible = !dialogo->Visible;
+
+	}
+		
 }

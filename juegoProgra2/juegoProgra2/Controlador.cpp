@@ -25,67 +25,69 @@ void CControlador::MoverMarco(Keys key, int limX, int limY)
 }
 
 void CControlador::dibujarFondo(Graphics^ g, Bitmap^ bmp, Bitmap^bmpM, Bitmap^ bmpD,
-	int wfondo, int hfondo)
+	int wfondo, int hfondo,Label^ dialogo)
 {
-		Bitmap^ bmFondo = gcnew Bitmap(wfondo, hfondo);
-		Graphics^ gFondo = Graphics::FromImage(bmFondo); // de donde saca la imagen del fondo?
+	Bitmap^ bmFondo = gcnew Bitmap(wfondo, hfondo);
+	Graphics^ gFondo = Graphics::FromImage(bmFondo); // de donde saca la imagen del fondo?
 
-		// el Graphics g representa la pantalla
-		int xPantalla = marco->GetX() -
-			g->VisibleClipBounds.Width / 2;
+	// el Graphics g representa la pantalla
+	int xPantalla = marco->GetX() -
+		g->VisibleClipBounds.Width / 2;
 
-		x = xPantalla;
+	x = xPantalla;
 
-		// Validacion
-		if (marco->GetX() < g->VisibleClipBounds.Width / 2)
-			x = 0;
-		else if (wfondo - marco->GetX() < g->VisibleClipBounds.Width / 2)
-			x = wfondo - g->VisibleClipBounds.Width;
+	// Validacion
+	if (marco->GetX() < g->VisibleClipBounds.Width / 2)
+		x = 0;
+	else if (wfondo - marco->GetX() < g->VisibleClipBounds.Width / 2)
+		x = wfondo - g->VisibleClipBounds.Width;
 
-		int yPantalla = marco->GetY() -
-			g->VisibleClipBounds.Height / 2;
+	int yPantalla = marco->GetY() -
+		g->VisibleClipBounds.Height / 2;
 
-		y = yPantalla;
-		// Validacion
-		if (marco->GetY() < g->VisibleClipBounds.Height / 2)
-			y = 0;
-		else if (hfondo - marco->GetY() < g->VisibleClipBounds.Height / 2)
-			y = hfondo - g->VisibleClipBounds.Height;
+	y = yPantalla;
+	// Validacion
+	if (marco->GetY() < g->VisibleClipBounds.Height / 2)
+		y = 0;
+	else if (hfondo - marco->GetY() < g->VisibleClipBounds.Height / 2)
+		y = hfondo - g->VisibleClipBounds.Height;
 
-		// Dibujo el Fondo
-		gFondo->DrawImage(bmp, 0, 0,
-			wfondo, hfondo);
+	// Dibujo el Fondo
+	gFondo->DrawImage(bmp, 0, 0,
+		wfondo, hfondo);
 
-		// Dibujo el Personaje
-		marco->dibujar(gFondo, bmpM);
+	// Dibujo el Personaje
+	marco->dibujar(gFondo, bmpM);
 
-		//dibujar dialog box 
-		//porque dibuja el dialog siempre??
-		marco->dibujarDialogo(gFondo, bmpD, x, y, wfondo, hfondo);
+	//dibujar dialog box 
+	//porque dibuja el dialog siempre??
+	marco->dibujarDialogo(gFondo, bmpD,dialogo,x,y,wfondo,hfondo);
 
-		// Rectangulos de Origen y Destino
-		Rectangle rOrigen(0, 0,
-			g->VisibleClipBounds.Width,
-			g->VisibleClipBounds.Height);
-		Rectangle rDestino(x, y,
-			g->VisibleClipBounds.Width,
-			g->VisibleClipBounds.Height);
+	// Rectangulos de Origen y Destino
+	Rectangle rOrigen(0, 0,
+		g->VisibleClipBounds.Width,
+		g->VisibleClipBounds.Height);
+	Rectangle rDestino(x, y,
+		g->VisibleClipBounds.Width,
+		g->VisibleClipBounds.Height);
 
-		// Dibujando la Pantalla
-		g->DrawImage(bmFondo, rOrigen, rDestino,
-			GraphicsUnit::Pixel);
+	// Dibujando la Pantalla
+	g->DrawImage(bmFondo, rOrigen, rDestino,
+		GraphicsUnit::Pixel);
+
+
 
 }
 void CControlador::QuietoMarco(Keys key)
 {
 	marco->quieto(key);
 }
-void CControlador::dibujarDialogo(Graphics^ g, Bitmap^bmpD, int x, int y, int wpantalla, int hpantalla)
+void CControlador::dibujarDialogo(Graphics^ g, Bitmap^bmpD,Label^dialogo, int x, int y, int wpantalla, int hpantalla)
 {
-	marco->dibujarDialogo(g, bmpD,x,y,wpantalla,hpantalla);
+	marco->dibujarDialogo(g, bmpD,dialogo,x,y,wpantalla,hpantalla);
 	
 }
-void CControlador::marcoHablar(Keys key)
+void CControlador::marcoHablar(Keys key,Label^dialogo)
 {
-	marco->hablar(key);
+	marco->hablar(key ,dialogo);
 }

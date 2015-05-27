@@ -1,7 +1,7 @@
 #pragma once
 
 enum tipo {
-	agua, fuego, trueno
+	agua, fuego, trueno,planta
 };
 
 class Pokemon
