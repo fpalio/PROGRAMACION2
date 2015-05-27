@@ -19,7 +19,7 @@ void Batalla::Pelear() {
 		char x = getchar();
 		flushall();
 		if (x == '1') {
-			int att = p1->getPoke()->AttackPow(); //ataque del p1
+			int att = p1->getPoke()->AttackPow(/*Pasar como parametro el ataque escogido*/); //ataque del p1
 			p2->getPoke()->RecvDmg(att); //p2 recibe el daño de p1
 			std::cout << "p1 ataca a p2 con " << att << " daño" << std::endl;
 		}
