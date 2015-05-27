@@ -44,6 +44,7 @@ namespace juegoProgra2 {
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
 	private: System::Windows::Forms::PictureBox^  pictureBox2;
 	private: System::Windows::Forms::PictureBox^  pictureBox3;
+	private: System::Windows::Forms::Label^  label1;
 
 	protected:
 	private: System::ComponentModel::IContainer^  components;
@@ -67,6 +68,7 @@ namespace juegoProgra2 {
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
@@ -108,29 +110,38 @@ namespace juegoProgra2 {
 			this->pictureBox3->TabStop = false;
 			this->pictureBox3->Visible = false;
 			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Enabled = false;
+			this->label1->Location = System::Drawing::Point(30, 236);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(35, 13);
+			this->label1->TabIndex = 3;
+			this->label1->Text = L"label1";
+			this->label1->Visible = false;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(552, 347);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->pictureBox1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->MaximizeBox = false;
 			this->Name = L"MyForm";
-<<<<<<< HEAD
-			this->Text = L"Pokemon UPC";
-=======
 			this->Text = L"MyForm";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
->>>>>>> origin/master
 			this->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &MyForm::MyForm_KeyDown);
 			this->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &MyForm::MyForm_KeyUp);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -146,7 +157,7 @@ namespace juegoProgra2 {
 
 		controlador->dibujarFondo(buffer->Graphics, bm, bmpM,bmpD,
 			buffer->Graphics->VisibleClipBounds.Width * 2,
-			buffer->Graphics->VisibleClipBounds.Height * 2);
+			buffer->Graphics->VisibleClipBounds.Height * 2,label1);
 
 		buffer->Render(g);
 
@@ -163,7 +174,7 @@ namespace juegoProgra2 {
 		controlador->MoverMarco(e->KeyCode,
 			this->DisplayRectangle.Width * 2,
 			this->DisplayRectangle.Height * 2);
-		controlador->marcoHablar(e->KeyCode);
+		controlador->marcoHablar(e->KeyCode,label1);
 
 	}
 private: System::Void MyForm_KeyUp(System::Object^  sender, System::Windows::Forms::KeyEventArgs^  e) {

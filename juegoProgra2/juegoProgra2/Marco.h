@@ -35,9 +35,9 @@ public:
 	void quieto(Keys key);
 	// TODO:
 	// mover dialogo a UI
-	void dibujarDialogo(Graphics^ g, Bitmap^bmpD,
+	void dibujarDialogo(Graphics^ g, Bitmap^bmpD, Label^ dialogo,
 	int xpantalla, int ypantalla,int wpantalla, int hpantalla);
 
-	void hablar(Keys key);
+	void hablar(Keys key,Label^dialogo);
 };
 

@@ -24,7 +24,7 @@ void CControlador::MoverMarco(Keys key, int limX, int limY)
 }
 
 void CControlador::dibujarFondo(Graphics^ g, Bitmap^ bmp, Bitmap^bmpM, Bitmap^ bmpD,
-	int wfondo, int hfondo)
+	int wfondo, int hfondo,Label^ dialogo)
 {
 	Bitmap^ bmFondo = gcnew Bitmap(wfondo, hfondo);
 	Graphics^ gFondo = Graphics::FromImage(bmFondo); // de donde saca la imagen del fondo?
@@ -60,7 +60,7 @@ void CControlador::dibujarFondo(Graphics^ g, Bitmap^ bmp, Bitmap^bmpM, Bitmap^ b
 
 	//dibujar dialog box 
 	//porque dibuja el dialog siempre??
-	marco->dibujarDialogo(gFondo, bmpD,x,y,wfondo,hfondo);
+	marco->dibujarDialogo(gFondo, bmpD,dialogo,x,y,wfondo,hfondo);
 
 	// Rectangulos de Origen y Destino
 	Rectangle rOrigen(0, 0,
@@ -80,12 +80,12 @@ void CControlador::QuietoMarco(Keys key)
 {
 	marco->quieto(key);
 }
-void CControlador::dibujarDialogo(Graphics^ g, Bitmap^bmpD, int x, int y, int wpantalla, int hpantalla)
+void CControlador::dibujarDialogo(Graphics^ g, Bitmap^bmpD,Label^dialogo, int x, int y, int wpantalla, int hpantalla)
 {
-	marco->dibujarDialogo(g, bmpD,x,y,wpantalla,hpantalla);
+	marco->dibujarDialogo(g, bmpD,dialogo,x,y,wpantalla,hpantalla);
 	
 }
-void CControlador::marcoHablar(Keys key)
+void CControlador::marcoHablar(Keys key,Label^dialogo)
 {
-	marco->hablar(key);
+	marco->hablar(key ,dialogo);
 }
