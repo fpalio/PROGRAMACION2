@@ -85,6 +85,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Controlador.h" />
+    <ClInclude Include="Entrenador.h" />
+    <ClInclude Include="Estado.h" />
     <ClInclude Include="Marco.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
@@ -99,6 +101,8 @@
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="Controlador.cpp" />
+    <ClCompile Include="Entrenador.cpp" />
+    <ClCompile Include="Estado.cpp" />
     <ClCompile Include="juegoProgra2.cpp" />
     <ClCompile Include="Marco.cpp" />
     <ClCompile Include="MyForm.cpp" />

@@ -1,12 +1,18 @@
   #pragma once
 #pragma once
 #include "Marco.h"
+enum STATE {
+	overworld,
+	batalla
+};
+
 class CControlador
 {
 private:
 	int x;
 	int y;
 	CMarco* marco;
+	STATE estado;
 
 public:
 	CControlador(int x, int y, CMarco* marco);
